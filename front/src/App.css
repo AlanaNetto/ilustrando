@@ -1,28 +1,139 @@
+html,
+body,
+#root,
 .App {
-  text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+
+.App>.row {
+  margin: 0px;
+  height: calc(100% - 63px);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.App .navbar-brand {
+  padding: 10px;
+  height: auto;
+}
+
+.App .navbar {
+  background-color: white;
+  margin-bottom: 0px;
+  min-height: auto;
+}
+
+.App .menu,
+.App .content {
+  padding: 0px;
+  width: 85%;
+  height: 100%;
+}
+
+.App .menu {
+  background-color: #f8f8f8;
+  width: 15%;
+}
+
+.App .menu .menu-item {
+  margin: 20px;
+  color: gray;
+  font-size: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.App .content .header-subpanel .container-fluid {
+  height: 100%;
+}
+
+.App .content .header-subpanel {
+  border-radius: 0px;
+  background-color: #ececec;
+}
+
+.App .content .header-subpanel .title {
+  color: gray;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.App .content .header-subpanel .info-money {
+  padding: 5px 0px;
+}
+
+.App .content .header-subpanel .info-money .row {
+  margin: 0px;
+  text-align: right;
+}
+
+.App .money-in,
+.App .in {
+  color: green;
+}
+
+.App .money-out,
+.App .out {
+  color: red;
+}
+
+.App .money-in,
+.App .money-out {
+  font-weight: 700;
+}
+
+.App label.money-in,
+.App label.money-out {
+  margin: 0px;
+}
+
+.App .month-info {
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.App .month-info.selected {
+  background-color: #D4EDDA;
+  border: 2px solid #c3e6cb;
+}
+
+.App .detailed-month-info {
+  padding: 5px 20px;
+  height: 100%;
+}
+
+.App .detailed-month-info .title,
+h3.title {
+  margin: 0px;
+}
+
+.App .detailed-month-info .infos {
   padding: 20px;
-  color: white;
+  margin-top: 5px;
+  border-radius: 5px;
+  height: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+.App .detailed-month-info .infos.in {
+  color: black;
+  background-color: #D4EDDA;
+  border: 2px solid #c3e6cb;
 }
 
-.App-intro {
-  font-size: large;
+.App .detailed-month-info .infos .details {
+  height: 95%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App .detailed-month-info .infos.out {
+  color: black;
+  background-color: #f8d7da;
+  border: 2px solid #f5c6cb;
+}
+
+.App .info-block {
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  padding: 10px;
 }

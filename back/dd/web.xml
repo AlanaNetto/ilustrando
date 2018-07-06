@@ -2,6 +2,15 @@
 
 <web-app xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlnx:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
 
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>HelloWorldExample</servlet-name>
         <servlet-class>HelloWorldExample</servlet-class>
@@ -10,6 +19,68 @@
     <servlet-mapping>
         <servlet-name>HelloWorldExample</servlet-name>
         <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Receipts</servlet-name>
+        <servlet-class>controller.Receipts</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Receipts</servlet-name>
+        <url-pattern>/api/receipts</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Category</servlet-name>
+        <servlet-class>controller.Category</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Category</servlet-name>
+        <url-pattern>/api/category</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Items</servlet-name>
+        <servlet-class>controller.Items</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Items</servlet-name>
+        <url-pattern>/api/items</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Fundraise</servlet-name>
+        <servlet-class>controller.Fundraise</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Fundraise</servlet-name>
+        <url-pattern>/api/fundraise</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FundAssignment</servlet-name>
+        <servlet-class>controller.FundAssignment</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FundAssignment</servlet-name>
+        <url-pattern>/api/fundassignment</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Panel</servlet-name>
+        <servlet-class>controller.Panel</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Panel</servlet-name>
+        <url-pattern>/api/panel</url-pattern>
     </servlet-mapping>
 
 </web-app>
